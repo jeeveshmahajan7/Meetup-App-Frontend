@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Header setSearchText={setSearchText} />
+      <Header setSearchText={setSearchText} showSearch={true} />
 
       <main>
         <div className="d-flex justify-content-between align-items-center">

@@ -23,7 +23,7 @@ const EventDetails = () => {
 
   return (
     <>
-      <Header />
+      <Header showSearch={false}/>
 
       <main>
         {loading ? (

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Header = ({ setSearchText }) => {
+const Header = ({ setSearchText, showSearch = true }) => {
   return (
     <>
       <nav>
@@ -8,12 +8,14 @@ const Header = ({ setSearchText }) => {
           <NavLink className="navbar-brand meetup-logo" to="/">
             meetup
           </NavLink>
-          <input
-            className="form-control w-auto"
-            type="text"
-            placeholder="🔍 Search by title and t..."
-            onChange={(e) => setSearchText(e.target.value)}
-          />
+          {showSearch && (
+            <input
+              className="form-control w-auto"
+              type="text"
+              placeholder="🔍 Search by title and t..."
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+          )}
         </div>
         <hr />
       </nav>
