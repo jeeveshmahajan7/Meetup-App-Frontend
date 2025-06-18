@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import fetchEventsData from "../services/eventService";
-import Header from "../components/Header";
 import displayDateAndTime from "../utils/dateUtils";
+import Header from "../components/Header";
 import "../App.css";
 
 const EventDetails = () => {
