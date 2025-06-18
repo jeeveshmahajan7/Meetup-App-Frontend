@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import fetchEventsData from "../services/eventService";
 import Header from "../components/Header";
-import displayDateAndTime from "../utils/DateUtils";
+import displayDateAndTime from "../utils/dateUtils";
 import "../App.css";
 
 const EventDetails = () => {
@@ -81,8 +81,12 @@ const EventDetails = () => {
                 </div>
                 <div>
                   <h5 className="mt-5">
-                    {eventData.speakers.length === 1 ? <span>Speaker</span> : <span>Speakers</span>}: (
-                    {eventData.speakers.length})
+                    {eventData.speakers.length === 1 ? (
+                      <span>Speaker</span>
+                    ) : (
+                      <span>Speakers</span>
+                    )}
+                    : ({eventData.speakers.length})
                   </h5>
                   <br />
                   <div className="row">
