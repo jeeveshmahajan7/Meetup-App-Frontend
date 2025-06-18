@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import displayDateAndTime from "../utils/DateUtils";
+import displayDateAndTime from "../utils/dateUtils";
 import fetchEventsData from "../services/eventService";
 
 const EventListings = ({ eventFilterValue, searchText }) => {
